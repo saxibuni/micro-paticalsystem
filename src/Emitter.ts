@@ -1,7 +1,7 @@
 import { Pool } from "./Pool";
-import Partical, { IBounds, IParticalOptions } from "./Partical";
+import { Partical, IBounds, IParticalOptions } from "./Partical";
 import { shareTicker as ticker } from "./Ticker";
-import IFactory from "./IFactory";
+import { IFactory } from "./IFactory";
 
 export class Emitter<T extends Partical<any>, C>  {
   /**

@@ -1,4 +1,4 @@
-import { Emitter } from '@/Emitter';
+import { Emitter } from 'micro-particalsystem';
 import { DomFactory, DomPartical } from './DomManager';
 import './index.scss';
 

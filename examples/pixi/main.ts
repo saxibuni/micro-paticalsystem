@@ -1,4 +1,4 @@
-import { Emitter } from '@/Emitter';
+import { Emitter } from 'micro-particalsystem'
 import { PixiFactory, PixiPartical } from './PixiManager';
 import * as PIXI from 'pixi.js';
 import "./index.scss"
@@ -127,7 +127,7 @@ function createMouseFollowEmitter() {
     },
     factory,
     particalOptions: {
-      angle: { min: Math.PI / 2, max: Math.PI / 2 },
+      angle: { min: Math.PI * 0.25, max: Math.PI * 0.75 },
       speedStep: { min: 1, max: 2 },
       scaleStep: { min: 0, max: 0.01 },
       acceleration: { x: 0, y: 0.05 },

@@ -1,5 +1,4 @@
-import IFactory from "@/IFactory";
-import Partical from "@/Partical";
+import { Partical, IFactory } from "micro-particalsystem";
 import * as PIXI from "pixi.js";
 import particalPNG from "./assets/circle.svg";
 

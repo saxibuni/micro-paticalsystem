@@ -1,29 +1,17 @@
 {
   "compilerOptions": {
     "strictNullChecks": false,
-    "noImplicitAny": false,
-    "module": "CommonJS",
-    "target": "ES2020",
-    "allowSyntheticDefaultImports": true,
-    "esModuleInterop": true,
-    "experimentalDecorators": true,
-    "noImplicitThis": true,
-    "noImplicitReturns": true,
-    "alwaysStrict": true,
-    "noFallthroughCasesInSwitch": true,
+    "target": "ESNext",
+    "outDir": "./dist/esm",
+    "rootDir": "./src",
     "strict": true,
-    "lib": ["ES2020", "DOM"],
-
-    "baseUrl": ".",
-    "paths": {
-      "@/*": ["src/*"]
-    },
+    "moduleResolution": "Bundler",
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "sourceMap": true,
+    "declaration": true,
+    "declarationDir": "./dist/types",
+    "lib": ["esnext", "DOM"]
   },
-  "include": [
-    "./**/*"
-  ],
-
-  "exclude": [
-    "node_modules"
-  ]
+  "include": ["src/**/*"]
 }

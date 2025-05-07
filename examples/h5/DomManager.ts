@@ -1,6 +1,4 @@
-import IFactory from "@/IFactory";
-import Partical from "@/Partical";
-
+import { IFactory, Partical } from "micro-particalsystem";
 
 class DomPartical extends Partical<HTMLElement>  { 
   protected createElement() {
