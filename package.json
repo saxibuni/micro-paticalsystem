@@ -1,0 +1,26 @@
+{
+  "name": "mirco-particalsystem",
+  "type": "module",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "vite --host",
+    "build": "vue-tsc -b && vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "pixi.js": "^7.4.3"
+  },
+  "devDependencies": {
+    "@types/node": "^22.10.1",
+    "sass": "^1.87.0",
+    "typescript": "~5.6.2",
+    "vite": "^6.0.1"
+  },
+  "keywords": [
+    "particales",
+    "particales-system",
+    "canvas-particles",
+    "dom-particales"
+  ]
+}

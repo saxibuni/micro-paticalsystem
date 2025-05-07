@@ -1,4 +1,4 @@
-export default class Partical {
+export default class Partical<T extends any> {
   protected angle: number; //运动角度
   protected speedStep: number; //运动速度
   protected scaleStep: number; //缩放速度
@@ -10,7 +10,7 @@ export default class Partical {
   public y: number;
   public scale: number = 1;
 
-  public el: any;
+  public el: T;
 
   constructor() {
     this.createElement();
@@ -35,10 +35,11 @@ export default class Partical {
     this.speedStep = this.getRandomValue(options.speedStep);
     this.acceleration = options.acceleration || { x: 0, y: 0 };
     this.velocity = {
-      x: this.speedStep * Math.sin(this.angle),
-      y: -this.speedStep * Math.cos(this.angle) //大部分坐标系统Y轴方向是向下的
+      x: this.speedStep * Math.cos(this.angle),
+      y: this.speedStep * Math.sin(this.angle)
     }
     this.scaleStep = this.getRandomValue(options.scaleStep);
+    this.scale = 1
     this.spawnRegion = options.spawnRegion || {
       x: 0,
       y: 0,
@@ -59,7 +60,6 @@ export default class Partical {
     let value = min + (max - min) * Math.random();
     return value;
   }
-
 
   protected get spawnPoint() {
     let { x, y, width, height } = this.spawnRegion;

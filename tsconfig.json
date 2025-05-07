@@ -12,11 +12,17 @@
     "alwaysStrict": true,
     "noFallthroughCasesInSwitch": true,
     "strict": true,
-    "lib": ["ES2020"]
+    "lib": ["ES2020", "DOM"],
+
+    "baseUrl": ".",
+    "paths": {
+      "@/*": ["src/*"]
+    },
   },
   "include": [
     "./**/*"
   ],
+
   "exclude": [
     "node_modules"
   ]

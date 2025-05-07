@@ -1,25 +1,5 @@
+// requestAnimationFrame pollyfill
 
-// Date.now
-if (!(Date.now && Date.prototype.getTime)) {
-  Date.now = function now() {
-    return new Date().getTime();
-  };
-}
-
-// performance.now
-if (!(globalThis.performance && globalThis.performance.now)) {
-  var startTime = Date.now();
-
-  if (!globalThis.performance) {
-    globalThis.performance = {};
-  }
-
-  globalThis.performance.now = function () {
-    return Date.now() - startTime;
-  };
-}
-
-// requestAnimationFrame
 var lastTime = Date.now();
 
 if (!globalThis.requestAnimationFrame) {
@@ -41,7 +21,7 @@ if (!globalThis.requestAnimationFrame) {
     return setTimeout(function () {
       lastTime = Date.now();
       callback(globalThis.performance.now());
-    }, delay);
+    }, delay) as unknown as number;
   };
 }
 
